@@ -10,12 +10,14 @@ class Gossip
     @content = content
   end
 
+  #enregistrer le gossip dans csv
   def save
     CSV.open("db/gossip.csv", "ab") do |csv|
       csv << [@author, @content]
     end
   end
 
+  #pour afficher tous les gossips
   def self.all
     all_gossips = []
     CSV.read("./db/gossip.csv").each do |csv_line|
@@ -24,6 +26,7 @@ class Gossip
     return all_gossips
   end
 
+  #pour trouver un gossip en fonction de l'index
   def find(id)
     table = CSV.parse(File.read("db/gossip.csv"))
     table2 = []
@@ -32,6 +35,7 @@ class Gossip
     return table2
   end
 
+  #pour modifier le gossip
   def update(author, content, n)
     puts author
     puts content

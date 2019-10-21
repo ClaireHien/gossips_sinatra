@@ -10,12 +10,14 @@ class Comment
     @gossip_id = gossip_id
   end
 
+  #pour enregistrer un nouveau commentaire
   def save
     CSV.open("db/comment.csv", "ab") do |csv|
       csv << [@author, @content, @gossip_id]
     end
   end
 
+  #pour afficher les commentaires
   def self.all
     all_comments = []
     CSV.read("./db/comment.csv").each do |csv_line|
