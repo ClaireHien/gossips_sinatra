@@ -4,7 +4,7 @@ Par Marine ELADOUZI & Claire TARDY
 <br /><br />
 <strong>Pour lancer l'application : </strong><br />
 $ bundle install<br />
-$ shotgun -p 4567 <em>(laissez tourner le terminal en fond et naviguez sur l'application à partir de votre port local : localhost:4567)
+$ shotgun -p 4567 (laissez tourner le terminal en fond et naviguez sur l'application à partir de votre port local : localhost:4567)
 <br /><br />
 <strong>Page d'index :</strong>
 <ul><li>Page d'accueil
