@@ -1,22 +1,40 @@
 <html>
   <head>
     <title>Editer</title>
-  </head>
-  <body>
-
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Staatliches&display=swap" rel="stylesheet">  <!-- polices -->
+    </head>
+    <style>
+    a {text-decoration:none !important;}
+    .button{border:1px solid black;padding:5px;margin:10px;text-transform:uppercase;}
+    .button:hover{border:1px solid grey;box-shadow:2px 2px 2px grey;}
+    body {font-family: 'Nanum Gothic', sans-serif; background-color:grey;}
+    .box{margin:30px 0px 30px 100px; padding:50px; width:700px; background-color:white;}
+    .title{margin-top:50px; text-transform:uppercase;}
+    .separation{border-bottom:3px double grey; width:400px; margin:auto;}
+    </style>
+    <body><div class="box">
+    
   <% n = params['id'].to_i %>
-    <h1>Editer le potin N°<%= n %></h1>
+    <font class="title"><h1>Editer le potin N°<%= n %></h1></font>
+
+    <a href="/" style="font-size:10px; text-transform:uppercase;"> > Retour à la page d'accueil </a><br /><br /><br />
 
 
-Son auteur : <%= gossips[n].author %> <br />
-Le contenu du potin : <%= gossips[n].content %> <br /><br />
+    <font style="font-size:25px;"> <strong><%= gossips[n].author %> a dit :</strong><br />
+    <%= gossips[n].content %></font><br /><br /><br />
 
-    <p>Modifie les informations ci-dessous</p>
+    <p>Modifie le potin avec le formulaire ci-dessous</p>
     <form action='/gossips/<%= n %>/edit' method='POST'>
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
-      <input type='submit'/>
+ 
+    <table width="100%"><tr><td width="50%">
+    NOM : <br />
+    <input type='text' name='gossip_author'/><br/><br /></td><td>
+    POTIN : <br />
+    <input type='text' name='gossip_content'/><br/><br /></td></tr></table>
+    <input type='submit'/>
+
     </form>
 
+    </div>
   </body>
 </html>

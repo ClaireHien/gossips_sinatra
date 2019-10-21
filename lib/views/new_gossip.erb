@@ -1,14 +1,27 @@
 <html>
   <head>
     <title>Créer un potin</title>
-  </head>
-  <body>
-    <h1>Crée un potin !</h1>
-    <p>Balance ton potin via le formulaire ci-dessous</p>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Staatliches&display=swap" rel="stylesheet">  <!-- polices -->
+    </head>
+    <style>
+    a {text-decoration:none !important;}
+    .button{border:1px solid black;padding:5px;margin:10px;text-transform:uppercase;}
+    .button:hover{border:1px solid grey;box-shadow:2px 2px 2px grey;}
+    body {font-family: 'Nanum Gothic', sans-serif; background-color:grey;}
+    .box{margin:30px 0px 30px 100px; padding:50px; width:700px; background-color:white;}
+    .title{margin-top:50px; text-transform:uppercase;}
+    </style>
+    <body><div class="box">
+    <font class="title"><h1>Crée un potin !</h1></font>
+
+<a href="/" style="font-size:10px; text-transform:uppercase;"> > Retour à la page d'accueil </a><br /><br /><br />
+
+    <p>Ecrit un nouveau potin en remplissant le formulaire ci-dessous. </p>
     <form action='/gossips/new/' method='POST'>
-      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
-      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+      NOM : <br /><input type='text' name='gossip_author'/><br/><br />
+      CONTENU DU POTIN :<br /> <input type='text' name='gossip_content'/><br/><br />
       <input type='submit'/>
     </form>
+    </div>
   </body>
 </html>
