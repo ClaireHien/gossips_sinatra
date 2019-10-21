@@ -33,7 +33,7 @@
     <div class="separation"></div>
     <br /><font class="title"><h2>Commentaires</h2></font>
 
-    #affichage des commentaires du gossip affiché
+        <!-- affichage des commentaires du gossip affiché -->
     <% comments.each_with_index do |comment| %>
         <p style="font-size:18px; padding-left:30px;"><% if comment.gossip_id.to_i == n %>
         <strong><%= comment.author %> - </strong> <%= comment.content %>
@@ -42,7 +42,7 @@
       <% end %>
     <br />
 
-    #formulaire pour ajouter un commentaire
+        <!--formulaire pour ajouter un commentaire-->
       <strong>Ajouter un commentaire : </strong><br />
       <form action='/gossips/<%= n %>' method='POST'><br />
       <table width="100%"><tr><td width="50%">
