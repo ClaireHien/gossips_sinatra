@@ -3,8 +3,8 @@
     <title>The Gossip Project</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Staatliches&display=swap" rel="stylesheet">  <!-- polices -->
   </head>
-  <style>
-  #le css de la page
+  <!-- le css de la page-->
+    <style>
   a {text-decoration:none !important;}
   .button{border:1px solid black;padding:5px;margin:10px;text-transform:uppercase;}
   .button:hover{border:1px solid grey;box-shadow:2px 2px 2px grey;}
@@ -16,13 +16,13 @@
     <h1>Les derniers potins de Montpellier...</h1>
     <br />
 
-    #bouton / lien pour créer un nouveau gossip
+    <!-- bouton / lien pour créer un nouveau gossip-->
     <a href="/gossips/new/" class="button">
     Créer un nouveau potin
     </a>
     <div class="title"><h2>Tous les potins</h2></div>
 
-    #affiche tous les gossips
+    <!-- affiche tous les gossips-->
     <% gossips.each_with_index do |gossip, index| %>
       <p>
       <a href="/gossips/<%= index %>">  <%= gossip.content %> </a>
