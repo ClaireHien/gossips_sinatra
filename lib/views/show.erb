@@ -3,8 +3,8 @@
     <title>PAGE POTIN</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Staatliches&display=swap" rel="stylesheet">  <!-- polices -->
     </head>
+      <!-- le css de la page -->
     <style>
-    #le css de la page
     a {text-decoration:none !important;}
     .button{border:1px solid black;padding:5px;margin:10px;text-transform:uppercase;}
     .button:hover{border:1px solid grey;box-shadow:2px 2px 2px grey;}
@@ -15,18 +15,18 @@
     </style>
     <body><div class="box">
 
-    #pour paramétrer l'ID et le reprend dans la page
+    <!-- pour paramétrer l'ID et le reprend dans la page-->
     <% n = params['id'].to_i %>
     <font class="title"><h1>Potin N°<%= n %></h1></font>  
 
-    #lien vers la page d'accueil
+    <!-- lien vers la page d'accueil -->
     <a href="/" style="font-size:10px; text-transform:uppercase;"> > Retour à la page d accueil </a><br /><br /><br />
 
-    #affichage du gossip
+    <!-- affichage du gossip-->
     <font style="font-size:25px;"> <strong><%= gossips[n].author %> a dit :</strong><br />
     <%= gossips[n].content %></font><br /><br /><br />
 
-    #bouton / lien pour éditer le gossip
+    <!-- bouton / lien pour éditer le gossip-->
     <a href="<%= n %>/edit/" class="button">Editer le potin</a><br /><br />
 
     <br /><br />
