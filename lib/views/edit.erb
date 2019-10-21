@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Editer</title>
+  </head>
+  <body>
+
+  <% n = params['id'].to_i %>
+    <h1>Editer le potin N°<%= n %></h1>
+
+
+Son auteur : <%= gossips[n].author %> <br />
+Le contenu du potin : <%= gossips[n].content %> <br /><br />
+
+    <p>Modifie les informations ci-dessous</p>
+    <form action='/gossips/<%= n %>/edit' method='POST'>
+      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/>
+      Balance ton potin : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/>
+    </form>
+
+  </body>
+</html>
